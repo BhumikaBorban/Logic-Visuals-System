@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BST Visualizer - Custom Spacing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+<nav style="padding: 10px; display: flex; align-items: center;  flex-direction: column;">
+    <a href="../index.html" style="color: #38bdf8; text-decoration: none; font-weight: bold;">
+       ← Go back
+    </a>
+</nav>
+</header>
+    <div class="container">
+        <h1>BST Visualizer</h1>
+        <div class="controls">
+            <input type="number" id="nodeValue" placeholder="Value">
+            <button onclick="handleInsert()" class="btn-insert">Insert</button>
+            <button onclick="handleDelete()" class="btn-delete">Delete</button>
+            <button onclick="handleClear()">Clear</button>
+            <div class="traversal-buttons">
+                <button onclick="runTraversal('preorder')">Preorder</button>
+                <button onclick="runTraversal('inorder')">Inorder</button>
+                <button onclick="runTraversal('postorder')">Postorder</button>
+                <button onclick="runTraversal('levelorder')">Level Order</button>
+            </div>
+        </div>
+
+        <div id="visualizer-container">
+            <svg id="svg-canvas"></svg>
+            <div id="tree-container"></div>
+        </div>
+
+        <div class="output-panel">
+            <strong>Sequence: </strong>
+            <span id="output-text"></span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

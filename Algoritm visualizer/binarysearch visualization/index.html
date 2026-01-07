@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Binary Search Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+<nav style="padding: 10px; display: flex; align-items: center; flex-direction: column;">
+    <a href="../index.html" style="color: #38bdf8; text-decoration: none; font-weight: bold;">
+       ← Go Back
+    </a>
+</nav>
+</header>
+    <div class="container">
+        <h1>Binary Search Visualizer</h1>
+        
+        <div class="setup-container">
+            <h3>Step 1: Choose your Array</h3>
+            <div class="setup-controls">
+                <div class="option-card">
+                    <button onclick="generateRandomArray()">Random Array</button>
+                    <p>Generate 12 random numbers</p>
+                </div>
+                <div class="divider">OR</div>
+                <div class="option-card">
+                    <input type="text" id="customInput" placeholder="e.g. 5, 2, 9, 1">
+                    <button onclick="setCustomArray()">Set Custom Array</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="array-display-area" style="display: none;">
+            <div id="array-container"></div>
+            
+            <div class="search-controls">
+                <input type="number" id="targetValue" placeholder="Target">
+                <button class="btn-search" onclick="handleSearch()">Start Binary Search</button>
+                <button class="btn-reset" onclick="resetAll()">Reset Everything</button>
+            </div>
+
+            <div class="status-panel">
+                <div class="pointers">
+                    <div>Low Index: <span id="low-val">-</span></div>
+                    <div>Mid Index: <span id="mid-val">-</span></div>
+                    <div>High Index: <span id="high-val">-</span></div>
+                </div>
+                <p id="message">Enter a target value and click Search!</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
